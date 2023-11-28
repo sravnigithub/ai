@@ -146,7 +146,7 @@ try:
 except EOFError as e:
 	print("\nInvalid input please retry !!")
 
-
+#lion goat
 from collections import deque
 
 class State:
@@ -342,7 +342,7 @@ while not (sum(people_dict[i] for i in people_names) == 6):
 print("Congratulations! You won in " + str(turn_number) + " turns. (Minimum 11)")
 
 
-
+#8 puzzle
 from collections import deque
 
 def get_next_states(state):
@@ -506,13 +506,13 @@ import heapq
 import copy
 
 class Node:
-    def _init_(self, state, parent=None, g=0, h=0):
+    def __init__(self, state, parent=None, g=0, h=0):
         self.state = state
         self.parent = parent
         self.g = g
         self.h = h
 
-    def _lt_(self, other):
+    def __lt__(self, other):
         return (self.g + self.h) < (other.g + other.h)
 
 def print_puzzle(puzzle):
@@ -602,7 +602,7 @@ def input_puzzle(prompt):
         puzzle.append(row)
     return puzzle
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     print("Enter the initial state (3x3 puzzle, use 0 for the blank tile):")
     initial_state = input_puzzle("")
 
@@ -618,6 +618,7 @@ if _name_ == "_main_":
             print_puzzle(state)
     else:
         print("No solution found.")
+
 
 
 
@@ -820,7 +821,7 @@ if _name_ == "_main_":
 
 
 
-
+#n queen
 N = int(input("Enter the number of queens (N):"))
 ld = [0] * (2 * N - 1)
 rd = [0] * (2 * N - 1)
@@ -881,7 +882,7 @@ else:
     print(f"{fahrenheit_temp}°F is not below {threshold_temp}°F")
 
 
-
+#monkey banana
 class State:
     def __init__(self, monkey_position, box_position, banana_position, on_box):
         self.monkey_position = monkey_position
